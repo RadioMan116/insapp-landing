@@ -1,0 +1,135 @@
+.tools {
+	font-family: "Montserrat", sans-serif;
+	margin-bottom: 200px;
+
+	.swiper {
+		position: relative;
+
+		&-container {
+			transition: .5s;
+
+			&:hover {
+				transform: translateY(-10px);
+			}
+		}
+
+		&-wrapper {}
+
+		&-slide {
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			border-radius: 10px;
+			background: #ffffff;
+		}
+
+		&-prev, &-right {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			width: 70px;
+			height: 70px;
+			background: url("../img/svg/arrow-blue.svg") $main;
+			background-size: 22.58px 26.25px !important;
+			background-repeat: no-repeat !important;
+			background-position: center !important;
+			box-shadow: 0 20px 45px rgba(42, 83, 106, 0.1);
+			border-radius: 50%;
+			overflow: hidden;
+			transition: background-color 0.3s ease;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		&-prev {
+			left: -35px;
+			transform: rotate(-180deg) translateY(50%);
+
+			&.swiper-button-disabled {
+				background: url("../img/svg/arrow.svg") white;
+				transform: rotate(0deg) translateY(-50%);
+			}
+		}
+
+		&-right {
+			right: -35px;
+			transform: translateY(-50%);
+
+			&.swiper-button-disabled {
+				background: url("../img/svg/arrow.svg") white;
+				transform: rotate(-180deg) translateY(50%);
+			}
+		}
+	}
+
+	// .tools__inner
+	&__inner {}
+
+	// .tools__title
+	&__title {
+		font-style: normal;
+		font-weight: 800;
+		font-size: 132px;
+		line-height: 80.8%;
+		text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
+
+		@supports (-webkit-text-stroke: 1px black) {
+			text-shadow: unset;
+			-webkit-text-stroke: 1px black;
+			-webkit-text-fill-color: white;
+		}
+
+		color: white;
+		margin-bottom: 100px;
+	}
+
+	// .tools__info
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 117px;
+		bottom: 0;
+		max-width: 430px;
+	}
+
+	// .tools__caption
+	&__caption {
+		font-style: normal;
+		font-weight: 800;
+		font-size: 56px;
+		line-height: 100.8%;
+		color: #444444;
+		margin-bottom: 50px;
+
+		span {
+			color: $main;
+			display: block;
+		}
+	}
+
+	// .tools__text
+	&__text {}
+
+	// .tools__img
+	&__img {
+		padding: 36px 75px;
+		background: #f5f5f5;
+	}
+
+	// .tools__bg
+	&__bg {}
+}
+
+.container {}

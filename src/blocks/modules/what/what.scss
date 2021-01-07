@@ -1,0 +1,66 @@
+.what {
+	font-family: "Montserrat", sans-serif;
+	padding-top: 205px;
+	padding-bottom: 209px;
+
+	// .what__inner
+	&__inner {
+		display: flex;
+		// justify-content: space-between;
+		&:after {
+			content: "";
+			// height: 100%;
+			display: flex;
+			width: 1px;
+			background: #c4c4c4;
+			margin: 0 9% 0 11%;
+		}
+	}
+
+	// .what__item
+	&__item {
+		&:first-of-type {
+			.what__text {
+				max-width: 484px;
+			}
+		}
+
+		&:last-of-type {
+			order: 2;
+			.what__text {
+				max-width: 458px;
+			}
+		}
+	}
+
+	// .what__caption
+	&__caption {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 42px;
+		line-height: 100.8%;
+		margin-bottom: 50px;
+		/* or 42px */
+		/* gray */
+		color: #444444;
+
+		span {
+			color: $main;
+			display: block;
+		}
+	}
+
+	// .what__text
+	&__text {
+		font-family: "Open Sans", sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 160%;
+
+		/* or 29px */
+		color: #444444;
+	}
+}
+
+.container {}
