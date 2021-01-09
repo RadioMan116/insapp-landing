@@ -8,7 +8,6 @@ Swiper.use([Navigation, Autoplay]);
 
 		if (window.NodeList && !NodeList.prototype.forEach) {
 			NodeList.prototype.forEach = Array.prototype.forEach;
-			console.log(1);
 		}
 		Number.isNaN = Number.isNaN || function isNaN(input) {
 			return typeof input === "number" && input !== input;
@@ -16,7 +15,6 @@ Swiper.use([Navigation, Autoplay]);
 
 		var swiperInit = function () {
 			var swiperElements = document.querySelectorAll("[data-swiper]");
-			console.log(swiperElements);
 			swiperElements.forEach(function (node) {
 				if (node.classList.contains("swiper-container-horizontal") || node.classList.contains("swiper-container-vertical")) {
 					return false;

@@ -1,5 +1,5 @@
 .connect {
-	font-family: "Montserrat", sans-serif;
+
 
 	// .connect__top
 	&__top {
@@ -95,7 +95,7 @@
 		// @include container();
 		margin: 0 auto;
 		padding-top: 50px;
-		padding-bottom: 48px;
+		padding-bottom: 52px;
 		background: #ffffff;
 		box-shadow: 0 20px 45px rgba(42, 83, 106, 0.1);
 		border-radius: 10px;
@@ -119,7 +119,7 @@
 				max-width: 241px;
 			}
 		}
-		&:nth-of-type(3){
+		&:nth-of-type(3) {
 			margin-right: 97px;
 		}
 
@@ -142,8 +142,8 @@
 		font-size: 20px;
 		line-height: 120%;
 		color: #000000;
-		margin-bottom: 30px;
-		margin-top: 30px;
+		margin-bottom: 27px;
+		margin-top: 27px;
 	}
 
 	// .connect__desc

@@ -33,10 +33,10 @@
 		"@babel/plugin-transform-runtime": "^7.6.2",
 		"@babel/preset-env": "^7.6.3",
 		"@babel/preset-typescript": "^7.6.0",
-		"@babel/runtime": "^7.6.3",
-		"babel-loader": "^8.0.6",
 		"@babel/register": "^7.4.0",
+		"@babel/runtime": "^7.6.3",
 		"babel-eslint": "~10.1.0",
+		"babel-loader": "^8.0.6",
 		"bem-tools-core": "bem-tools/bem-tools-core",
 		"bem-tools-create": "bem-tools/bem-tools-create",
 		"browser-sync": "^2.23.6",
@@ -77,9 +77,9 @@
 		"yargs": "^15.4.1"
 	},
 	"dependencies": {
+		"core-js": "^3.3.2",
 		"jquery": "^3.5.1",
 		"smart-grid": "^2.1.2",
-		"core-js": "^3.3.2",
 		"swiper": "^6.4.5"
 	},
 	"lint-staged": {
