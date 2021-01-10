@@ -41,7 +41,7 @@
 		margin-bottom: 44px;
 		/* or 42px */
 		/* gray */
-		color: #444444;
+		color: $title;
 
 		span {
 			color: $main;
@@ -58,6 +58,6 @@
 		line-height: 162%;
 
 		/* or 29px */
-		color: #444444;
+		color: $title;
 	}
 }

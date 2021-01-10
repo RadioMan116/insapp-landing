@@ -1,6 +1,6 @@
 .relevant {
 
-	margin-bottom: 222px;
+	margin-bottom: 228px;
 
 	// .relevant__title
 	&__title {
@@ -8,9 +8,9 @@
 		font-weight: 800;
 		font-size: 56px;
 		line-height: 100.8%;
-		margin-bottom: 100px;
+		margin-bottom: 93px;
 		/* or 56px */
-		color: #444444;
+		color: $title;
 
 		span {
 			color: $main;
@@ -29,7 +29,7 @@
 		background: #ffffff;
 		border-radius: 10px;
 		width: calc((100%/4));
-		padding: 40px 18px 28px 40px;
+		padding: 40px 18px 32px 40px;
 		cursor: pointer;
 		transition: 0.3s;
 
@@ -48,7 +48,7 @@
 
 	// .relevant__img
 	&__img {
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 
 		* {
 			transition: 0.3s;

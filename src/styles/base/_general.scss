@@ -1,29 +1,44 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+	margin: 0;
+	padding: 0;
 }
 
 .container {
-    @include container();
-    @include sm(max-width, rem(510));
-    @include md(max-width, rem(690));
-    @include lg(max-width, rem(930));
-    @include xl(max-width, rem(1240));
+	@include container();
+	@include sm(max-width, rem(510));
+	@include md(max-width, rem(690));
+	@include lg(max-width, rem(930));
+	@include xl(max-width, rem(1240));
 }
-.button{
+
+.button {
 	color: #ffffff;
 	background: $main;
-	&:hover{
+	cursor: pointer;
+
+	&:hover {
 		opacity: 0.8;
 	}
 }
-.main{
+
+.main {
 	overflow: hidden;
 	max-width: 1900px;
 	width: 100%;
 	margin: 0 auto;
 }
-body{
+
+body {
 	background: #F8F8F8;
 	font-family: "Montserrat", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
 }
