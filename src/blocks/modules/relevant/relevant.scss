@@ -1,9 +1,24 @@
 .relevant {
+	@include to(1199px) {
+		margin-bottom: 114px;
+	}
+	@include to(991px) {
+		margin-bottom: 60px;
+	}
 
 	margin-bottom: 228px;
 
 	// .relevant__title
 	&__title {
+		@include to(1199px) {
+			font-size: 42px;
+			margin-bottom: 61px;
+		}
+
+		@include to(991px) {
+			margin-bottom: 30px;
+		}
+
 		font-style: normal;
 		font-weight: 800;
 		font-size: 56px;
@@ -20,12 +35,44 @@
 
 	// .relevant__inner
 	&__inner {
+		@include to(991px) {
+			flex-wrap: wrap;
+		}
+
 		display: flex;
 		justify-content: space-between;
 	}
 
 	// .relevant__item
 	&__item {
+		@include to(1199px) {
+			padding: 24px 14px;
+
+			&:not(:last-of-type) {
+				margin-right: 16px;
+			}
+		}
+
+		@include to(991px) {
+			box-sizing: border-box;
+			width: 337px;
+			max-width: 100%;
+			padding: 30px 15px 18px;
+			margin-right: 0;
+			background: #ffffff;
+			box-shadow: 0 20px 45px rgba(42, 83, 106, 0.1);
+			border-radius: 10px;
+			margin-bottom: 15px;
+
+			&:not(:last-of-type) {
+				margin-right: 0;
+			}
+
+			&:nth-of-type(odd) {
+				margin-right: 15px;
+			}
+		}
+
 		background: #ffffff;
 		border-radius: 10px;
 		width: calc((100%/4));
@@ -33,16 +80,18 @@
 		cursor: pointer;
 		transition: 0.3s;
 
-		&:not(:last-of-type) {
-			margin-right: 20px;
-		}
-
 		&:hover {
 			box-shadow: 0 20px 45px rgba(42, 83, 106, 0.1);
 			transform: translateY(-10px);
-			svg, svg path {
+
+			svg,
+			svg path {
 				fill: $main;
 			}
+		}
+
+		&:not(:last-of-type) {
+			margin-right: 20px;
 		}
 	}
 
@@ -57,6 +106,10 @@
 
 	// .relevant__text
 	&__text {
+		@include to(1199px) {
+			font-size: 14px;
+		}
+
 		font-style: normal;
 		font-weight: normal;
 		font-size: 16px;

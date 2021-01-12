@@ -1,0 +1,228 @@
+.mobile-menu {
+	position: relative;
+	z-index: 999999;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	a {
+		transition: .5s;
+		text-decoration: none;
+
+		&:hover {
+			color: $main;
+		}
+	}
+
+	.header {
+
+		// .header__tel
+		&__tel {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 120%;
+			color: $main;
+		}
+
+		// .header__links
+		&__links {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 70px;
+		}
+
+		// .header__link
+		&__link {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 20px;
+			color: #000000;
+			margin-bottom: 20px;
+		}
+
+		// .header__anchors
+		&__anchors {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 0;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #000000;
+			margin-bottom: 40px;
+		}
+
+		// .header__anchor
+		&__anchor {
+			margin-bottom: 20px;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.footer {
+
+		// .footer__center
+		&__center {}
+
+		// .footer__copyright
+		&__copyright {}
+	}
+
+	// .mobile-menu__button
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		z-index: 4;
+		top: 70vh;
+		right: 15px;
+		width: 60px;
+		height: 60px;
+		background: $main;
+		box-shadow: 0 20px 45px rgba(42, 83, 106, 0.1);
+		border-radius: 50%;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	// .mobile-menu__button-inner
+	&__button-inner {
+		transition-duration: 0.22s;
+		transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+		background-color: #fff;
+		pointer-events: none;
+
+		&, &:before, &:after {
+			position: absolute;
+			width: 40px;
+			height: 4px;
+			background-color: #fff;
+			border-radius: 4px;
+			transition-property: transform;
+			transition-duration: 0.15s;
+			transition-timing-function: ease;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			top: -10px;
+			transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			bottom: -10px;
+			transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+		}
+
+		.is-active & {
+			transform: rotate(225deg);
+			transition-delay: 0.12s;
+			transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+			&::before {
+				top: 0;
+				transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+				opacity: 0;
+			}
+
+			&::after {
+				bottom: 0;
+				transform: rotate(-90deg);
+				transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+		}
+	}
+
+	// .mobile-menu__inner
+	&__inner {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		padding: 22px 15px;
+		transform: scale(0);
+		transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		opacity: 0;
+		background: #f8f8f8;
+		pointer-events: none;
+
+		>div {
+			transform: translateY(-100%);
+			transition: all 0.6s;
+			opacity: 0;
+
+			&:last-of-type {
+				// transform: translateY(100%);
+			}
+
+			// $time-offset-close: 0;
+			// @for $i from 3 through 1 {
+			// 	&:nth-child(#{$i}) {
+			// 		$time-offset-close: $time-offset-close + 0.1;
+			// 		transition-delay: #{$time-offset-close}s;
+			// 		span {
+			// 			transition-delay: #{$time-offset-close}s;
+			// 		}
+			// 	}
+			// }
+		}
+
+		// opacity: ;
+		.is-active & {
+			transform: scale(1);
+			opacity: 1;
+
+			pointer-events: all;
+
+			>div {
+				transform: translateX(0);
+				backface-visibility: hidden;
+				opacity: 1;
+				$time-offset-open: 0.2;
+
+				@for $i from 1 through 3 {
+					&:nth-child(#{$i}) {
+						$time-offset-open: $time-offset-open + 0.2;
+						transition-delay: #{$time-offset-open}s;
+					}
+				}
+			}
+		}
+	}
+
+	// .mobile-menu__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+
+	// .mobile-menu__logo
+	&__logo {}
+
+	// .mobile-menu__tel
+	&__tel {}
+
+	// .mobile-menu__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .mobile-menu__footer
+	&__footer {}
+}

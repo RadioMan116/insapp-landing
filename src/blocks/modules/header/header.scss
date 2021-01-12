@@ -1,4 +1,8 @@
 .header {
+	@include to(1199px) {
+		margin-bottom: 60px;
+	}
+
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 115px;
@@ -9,6 +13,12 @@
 		align-items: center;
 
 		.header__top & {
+			@include to(991px) {
+				justify-content: space-between;
+				height: auto;
+				padding: 18px 0;
+			}
+
 			height: 100px;
 		}
 	}
@@ -18,18 +28,33 @@
 
 	// .header__logo
 	&__logo {
+		@include to(1199px) {
+			margin-right: 24px;
+		}
+
 		margin-right: auto;
 	}
 
 	// .header__links
 	&__links {
+
+		// flex-grow: 1;
+		@include to(1199px) {
+			flex-grow: 1;
+			justify-content: space-between;
+		}
+
 		display: flex;
 		align-items: center;
-		// flex-grow: 1;
 	}
 
 	// .header__link
 	&__link {
+		@include to(1199px) {
+			font-size: 14px;
+			margin-right: 12px;
+		}
+
 		font-style: normal;
 		font-weight: normal;
 		font-size: 16px;
@@ -37,6 +62,11 @@
 		color: #000000;
 		margin-right: 38px;
 		padding-right: 7px;
+		transition: .5s;
+
+		&:hover {
+			color: $main;
+		}
 	}
 
 	// .header__button
@@ -57,6 +87,11 @@
 
 	// .header__bottom
 	&__bottom {
+		@include to(991px) {
+			padding: 0;
+			border-top: 0;
+		}
+
 		position: relative;
 		border-top: 1px solid #000000;
 		font-style: normal;
@@ -66,6 +101,11 @@
 
 	// .header__anchors
 	&__anchors {
+		@include to(1199px) {
+			justify-content: flex-start;
+			padding-left: 133px;
+		}
+
 		display: flex;
 		flex-grow: 1;
 		justify-content: center;
@@ -74,6 +114,11 @@
 
 	// .header__anchor
 	&__anchor {
+		@include to(1199px) {
+			font-size: 14px;
+			margin-right: auto;
+		}
+
 		font-size: 16px;
 		line-height: 20px;
 		color: #000000;
@@ -81,13 +126,13 @@
 		position: relative;
 
 		&:after {
-			transition: 0.5s;
 			content: "";
 			display: flex;
 			position: absolute;
 			bottom: -8px;
 			width: 100%;
 			height: 3px;
+			transition: 0.5s;
 			background: $main;
 			opacity: 0;
 			pointer-events: none;

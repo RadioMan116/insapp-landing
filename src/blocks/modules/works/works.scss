@@ -1,4 +1,18 @@
 .works {
+	@include to(1199px) {
+		padding-bottom: 164px;
+	}
+
+	@include to(991px) {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		padding-bottom: 60px;
+
+		.container {
+			width: 100%;
+		}
+	}
 
 	position: relative;
 	padding-bottom: 327px;
@@ -12,6 +26,15 @@
 
 	// .works__title
 	&__title {
+		@include to(1199px) {
+			font-size: 66px;
+		}
+
+		@include to(1199px) {
+			font-size: 54px;
+			margin-bottom: 20px;
+		}
+
 		font-style: normal;
 		font-weight: 800;
 		font-size: 100px;
@@ -40,6 +63,10 @@
 		margin-bottom: 24px;
 
 		span {
+			@include to(1199px) {
+				margin-bottom: 24px;
+			}
+
 			margin-bottom: 43px;
 			display: flex;
 			align-items: center;
@@ -52,6 +79,14 @@
 
 	// .works__caption
 	&__caption {
+		@include to(1199px) {
+			margin-bottom: 62px;
+		}
+
+		@include to(1199px) {
+			margin-bottom: 40px;
+		}
+
 		margin-bottom: 83px;
 	}
 
@@ -68,15 +103,28 @@
 		font-size: 21px;
 		line-height: 26px;
 		/* identical to box height */
-
 		text-align: center;
 		text-transform: uppercase;
 	}
 
 	// .works__bg
 	&__bg {
+		@include to(1199px) {
+			width: 830px;
+		}
+
+		@include to(991px) {
+			position: static;
+			max-width: calc(100% + 82px);
+			margin-right: -82px;
+		}
+
 		position: absolute;
 		top: 20px;
 		right: -160px;
+
+		img {
+			max-width: 100%;
+		}
 	}
 }

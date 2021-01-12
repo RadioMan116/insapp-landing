@@ -1,14 +1,27 @@
 .footer {
+	@include to(991px) {
+		padding: 50px 0 15px;
+	}
+
 	background: #ffffff;
 	padding: 55px 0 50px;
 
 	// .footer__inner
 	&__inner {
+		@include to(991px) {
+			flex-direction: column;
+		}
+
 		display: flex;
 	}
 
 	// .footer__left
 	&__left {
+		@include to(991px) {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+
 		width: 17%;
 	}
 
@@ -17,8 +30,13 @@
 
 	// .footer__center
 	&__center {
+		@include to(991px) {
+			order: 2;
+			padding-top: 0;
+		}
+
 		/* or 22px */
-		/* black */
+		/* #000 */
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
@@ -28,36 +46,65 @@
 		line-height: 160%;
 		padding-top: 15px;
 
-		span,
-		a {
+		span, a {
+			@include to(991px) {
+				margin-bottom: 20px;
+			}
+
 			color: #000000;
 			margin-bottom: 30px;
 			text-decoration: none;
+
+			br {
+				display: none;
+			}
+		}
+
+		a {
+			transition: .5s;
+
+			&:hover {
+				color: $main;
+			}
 		}
 	}
 
 	// .footer__right
 	&__right {
+		@include to(991px) {
+			width: 100%;
+		}
+
 		font-style: normal;
 		font-weight: bold;
 		font-size: 20px;
 		line-height: 120%;
 		width: 296px;
 		padding-top: 10px;
+
 		/* or 24px */
 		/* blue */
-		color: #009dff;
-
 		a {
-			color: #009dff;
+			color: $main;
 			text-decoration: none;
 
 			&:first-child:after {
 				content: ",";
 			}
+
+			transition: .5s;
+
+			&:hover {
+				opacity: 0.7;
+			}
 		}
 
 		span {
+			@include to(991px) {
+				margin-top: 20px;
+				margin-bottom: 50px;
+			}
+
 			font-style: normal;
 			font-weight: normal;
 			font-size: 14px;
@@ -83,6 +130,11 @@
 
 	// .footer__copyright
 	&__copyright {
+		@include to(991px) {
+			margin-bottom: 50px;
+			font-size: 12px;
+		}
+
 		font-style: normal;
 		font-weight: normal;
 		font-size: 14px;
@@ -116,6 +168,10 @@
 		&.showBtn {
 			transform: translateY(0) rotate(-90deg);
 			opacity: 1;
+
+			&:hover {
+				opacity: .8;
+			}
 		}
 	}
 }
