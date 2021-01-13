@@ -46,7 +46,8 @@
 		line-height: 160%;
 		padding-top: 15px;
 
-		span, a {
+		span,
+		a {
 			@include to(991px) {
 				margin-bottom: 20px;
 			}
@@ -148,6 +149,10 @@
 
 	// .footer__button
 	&__button {
+		@include to(767px) {
+			display: none;
+		}
+
 		position: fixed;
 		z-index: 100;
 		right: 170px;

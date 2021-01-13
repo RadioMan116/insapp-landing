@@ -123,10 +123,12 @@
 			}
 		}
 		open() {
+			document.body.classList.add("overflow");
 			this.mobileMenu.classList.add("is-active");
 			document.addEventListener("keydown", this.EscClose);
 		}
 		close() {
+			document.body.classList.remove("overflow");
 			this.mobileMenu.classList.remove("is-active");
 			document.removeEventListener("keydown", this.EscClose);
 		}

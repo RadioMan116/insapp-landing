@@ -16,6 +16,10 @@
 			flex-direction: column-reverse;
 		}
 
+		@include to(767px) {
+			align-items: center;
+		}
+
 		display: flex;
 		justify-content: space-between;
 	}
@@ -46,6 +50,11 @@
 			border-bottom: none;
 			padding-bottom: 0;
 			margin-bottom: 30px;
+		}
+
+		@include to(767px) {
+			font-size: 25px;
+			line-height: 110%;
 		}
 
 		font-style: normal;
@@ -88,6 +97,10 @@
 			color: #000000;
 		}
 
+		@include to(767px) {
+			margin-bottom: 32px;
+		}
+
 		width: 100%;
 		max-width: 237px;
 		font-style: normal;
@@ -107,6 +120,13 @@
 
 		@include to(991px) {
 			max-width: 270px;
+		}
+
+		@include to(767px) {
+			font-size: 14px;
+			max-width: 253px;
+			line-height: 120%;
+			letter-spacing: 0.5px;
 		}
 
 		font-family: "Open Sans",
@@ -161,6 +181,11 @@
 			}
 		}
 
+		@include to(767px) {
+			width: 73%;
+			margin-bottom: 18px;
+		}
+
 		position: relative;
 		right: calc(-8vw + 31px);
 		bottom: -24px;
@@ -180,7 +205,6 @@
 
 	// .connect__bottom
 	&__bottom {
-
 		@include to(991px) {
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -189,6 +213,7 @@
 			padding: 0;
 			border-radius: 0;
 		}
+
 		max-width: 1540px;
 		// @include container();
 		margin: 0 auto;
@@ -206,6 +231,12 @@
 		}
 
 		@include to(991px) {
+			@include from(768px) {
+				&:nth-of-type(odd) {
+					margin-right: 15px;
+				}
+			}
+
 			width: 337px;
 			max-width: 100%;
 			margin-right: 0;
@@ -214,10 +245,11 @@
 			border-radius: 10px;
 			padding: 30px 15px 18px;
 			margin-bottom: 15px;
+		}
 
-			&:nth-of-type(odd) {
-				margin-right: 15px;
-			}
+		@include to(767px) {
+			width: 100%;
+			margin-bottom: 16px;
 		}
 
 		box-sizing: border-box;
@@ -229,8 +261,10 @@
 				margin-right: 72px;
 			}
 
-			.connect__desc {
-				max-width: 243px;
+			@include from(768px) {
+				.connect__desc {
+					max-width: 243px;
+				}
 			}
 		}
 
@@ -239,8 +273,10 @@
 				margin-right: 74px;
 			}
 
-			.connect__desc {
-				max-width: 241px;
+			@include from(768px) {
+				.connect__desc {
+					max-width: 241px;
+				}
 			}
 		}
 
@@ -248,24 +284,45 @@
 			@include from(1200px) {
 				margin-right: 97px;
 			}
+			@include to(767px) {
+				.connect__desc {
+
+					max-width: 250px;
+				}
+			}
 		}
 
 		&:nth-of-type(3), &:nth-of-type(4) {
-			.connect__desc {
-				max-width: 218px;
+			@include from(768px) {
+				.connect__desc {
+					max-width: 218px;
+				}
 			}
 		}
 	}
 
 	// .connect__icon
 	&__icon {
+
 		// margin-bottom: 30px;
+		@include to(767px) {
+			width: 30px;
+
+			img {
+				max-width: 100%;
+			}
+		}
 	}
 
 	// .connect__caption
 	&__caption {
 		@include to(1199px) {
 			font-size: 18px;
+		}
+
+		@include to(767px) {
+			margin-bottom: 14px;
+			margin-top: 28px;
 		}
 
 		font-style: normal;

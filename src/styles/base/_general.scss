@@ -10,6 +10,7 @@ ul {
 }
 
 .container {
+	box-sizing: border-box;
 	@include container();
 	@include sm(max-width, rem(510));
 	@include md(max-width, rem(690));
@@ -38,6 +39,9 @@ ul {
 body {
 	background: #F8F8F8;
 	font-family: "Montserrat", sans-serif;
+	&.overflow{
+		overflow: hidden;
+	}
 }
 
 html {

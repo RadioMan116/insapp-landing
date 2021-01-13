@@ -3,6 +3,10 @@
 		margin-bottom: 60px;
 	}
 
+	@include to(767px) {
+		margin-bottom: 12px;
+	}
+
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 115px;
@@ -19,6 +23,10 @@
 				padding: 18px 0;
 			}
 
+			@include to(767px) {
+				padding: 20px 0;
+			}
+
 			height: 100px;
 		}
 	}
@@ -30,6 +38,14 @@
 	&__logo {
 		@include to(1199px) {
 			margin-right: 24px;
+		}
+
+		@include to(767px) {
+			width: 65.23px;
+
+			img {
+				max-width: 100%;
+			}
 		}
 
 		margin-right: auto;
@@ -71,6 +87,15 @@
 
 	// .header__button
 	&__button {
+		@include to(767px) {
+			width: 200px;
+			height: 35px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
 		display: flex;
 		align-items: center;
 		justify-content: center;

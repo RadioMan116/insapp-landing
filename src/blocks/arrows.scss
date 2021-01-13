@@ -1,4 +1,12 @@
 .swiper {
+	@include to(767px) {
+
+		&-prev,
+		&-right {
+			display: none;
+		}
+	}
+
 	position: relative;
 
 	&-container {
@@ -8,6 +16,13 @@
 	&-wrapper {}
 
 	&-slide {
+		@include from(768px) {
+			&:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 20px 45px rgba(42, 83, 106, 0.05);
+			}
+		}
+
 		display: flex;
 		align-items: center;
 		overflow: hidden;
@@ -17,15 +32,16 @@
 		transition: .5s;
 
 		&-active {
-			opacity: 1;
-		}
+			@include to(767px) {
+				box-shadow: 0 20px 45px rgba(42, 83, 106, 0.05);
+			}
 
-		&:hover {
-			transform: translateY(-10px);
+			opacity: 1;
 		}
 	}
 
-	&-prev, &-right {
+	&-prev,
+	&-right {
 		display: flex;
 		align-items: center;
 		position: absolute;
