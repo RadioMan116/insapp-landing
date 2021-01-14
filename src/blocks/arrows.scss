@@ -1,8 +1,7 @@
 .swiper {
 	@include to(767px) {
 
-		&-prev,
-		&-right {
+		&-prev, &-right {
 			display: none;
 		}
 	}
@@ -40,8 +39,7 @@
 		}
 	}
 
-	&-prev,
-	&-right {
+	&-prev, &-right {
 		display: flex;
 		align-items: center;
 		position: absolute;

@@ -411,7 +411,7 @@ $fields: 0.9375rem;
     }
     address,caption,cite,code,dfn,em,strong,th,var{
         font-style: normal;
-        font-weight: normal;
+        font-weight: 400;
     }
     ul li{
         list-style: none;
@@ -421,7 +421,7 @@ $fields: 0.9375rem;
     }
     h1,h2,h3,h4,h5,h6{
         font-size: 100%;
-        font-weight: normal;
+        font-weight: 400;
     }
     sup{
         vertical-align: text-top;
@@ -450,15 +450,15 @@ $fields: 0.9375rem;
     height: 100vh;
     position: fixed;
     width: 100%;
-    
+
     > div{
         height: inherit;
         @include container();
-        
+
         > div{
             height: inherit;
             @include row-flex();
-            
+
             > div{
                 @include col();
                 @include size(1);

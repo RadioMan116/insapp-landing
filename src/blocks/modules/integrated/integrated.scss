@@ -23,6 +23,11 @@
 			margin-bottom: 50px;
 		}
 
+		@include to(767px) {
+			font-size: 32px;
+			margin-bottom: 44px;
+		}
+
 		display: flex;
 		flex-direction: column;
 		font-style: normal;
@@ -47,6 +52,21 @@
 		@include to(991px) {
 			grid-column-gap: 3.5em;
 			grid-row-gap: 3em;
+		}
+
+		@include to(767px) {
+			box-sizing: border-box;
+			position: relative;
+			max-width: unset;
+			overflow: auto;
+			font-size: 32px;
+			grid-template-columns: repeat(5, 83px);
+			grid-column-gap: 2em;
+			grid-row-gap: 1em;
+			padding-left: 12px;
+			// margin-right: -.9375rem;
+			padding-right: 16px;
+			padding-bottom: 60px;
 		}
 
 		// display: flex;

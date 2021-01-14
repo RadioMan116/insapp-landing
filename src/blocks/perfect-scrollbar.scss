@@ -1,0 +1,23 @@
+@include to(767px) {
+	.ps__rail-x {
+		opacity: 1;
+		height: 1px;
+		margin-bottom: 6px;
+
+		&:hover {
+			opacity: 1 !important;
+			background: #d0d0d0 !important;
+		}
+
+		.ps--active-x & {
+			background: #d0d0d0;
+		}
+
+		.ps__thumb-x {
+			background: #c4c4c4;
+			top: 50%;
+			height: 4px;
+			transform: translateY(-50%);
+		}
+	}
+}

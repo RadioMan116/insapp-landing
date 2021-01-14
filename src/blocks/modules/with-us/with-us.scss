@@ -7,6 +7,10 @@
 		margin-bottom: 50px;
 	}
 
+	@include to(767px) {
+		margin-bottom: 46px;
+	}
+
 	margin-bottom: 191px;
 
 	// .with-us__inner
@@ -64,7 +68,9 @@
 			grid-column-gap: 2em;
 			grid-row-gap: 1em;
 			padding-left: 12px;
-			margin-right: -.9375rem;
+			// margin-right: -.9375rem;
+			padding-right: 16px;
+			padding-bottom: 60px;
 		}
 
 		// display: flex;

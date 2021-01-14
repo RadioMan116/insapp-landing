@@ -41,13 +41,12 @@
 		flex-direction: column;
 		flex-grow: 1;
 		font-style: normal;
-		font-weight: normal;
+		font-weight: 400;
 		font-size: 14px;
 		line-height: 160%;
 		padding-top: 15px;
 
-		span,
-		a {
+		span, a {
 			@include to(991px) {
 				margin-bottom: 20px;
 			}
@@ -77,7 +76,7 @@
 		}
 
 		font-style: normal;
-		font-weight: bold;
+		font-weight: 700;
 		font-size: 20px;
 		line-height: 120%;
 		width: 296px;
@@ -107,7 +106,7 @@
 			}
 
 			font-style: normal;
-			font-weight: normal;
+			font-weight: 400;
 			font-size: 14px;
 			line-height: 160%;
 			/* or 22px */
@@ -137,7 +136,7 @@
 		}
 
 		font-style: normal;
-		font-weight: normal;
+		font-weight: 400;
 		font-size: 14px;
 		line-height: 160%;
 		// text-align: center;
