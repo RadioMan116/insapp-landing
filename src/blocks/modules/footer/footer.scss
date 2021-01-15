@@ -22,11 +22,23 @@
 			margin-bottom: 50px;
 		}
 
+		@include to(767px) {
+			margin-bottom: 36px;
+		}
+
 		width: 17%;
 	}
 
 	// .footer__logo
-	&__logo {}
+	&__logo {
+		@include to(767px) {
+			width: 65.23px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
 
 	// .footer__center
 	&__center {
@@ -46,18 +58,21 @@
 		line-height: 160%;
 		padding-top: 15px;
 
-		span, a {
+		span,
+		a {
 			@include to(991px) {
 				margin-bottom: 20px;
+			}
+
+			@include from(768px) {
+				br {
+					display: none;
+				}
 			}
 
 			color: #000000;
 			margin-bottom: 30px;
 			text-decoration: none;
-
-			br {
-				display: none;
-			}
 		}
 
 		a {
@@ -133,6 +148,12 @@
 		@include to(991px) {
 			margin-bottom: 50px;
 			font-size: 12px;
+		}
+
+		@include to(767px) {
+			font-size: 10px;
+			margin-bottom: 0;
+			margin-top: 49px;
 		}
 
 		font-style: normal;

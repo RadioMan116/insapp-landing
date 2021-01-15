@@ -138,10 +138,38 @@
 			}
 		}
 	}
-	console.log(mql);
+
 	if (mql) {
 		const menu = new Menu;
 		menu.render();
 	}
 
+
+
+})();
+// Form send
+(() => {
+	// ...ваш код
+	const form = document.querySelector(".application__form form");
+	const url = "https://httpbin.org/post";
+
+	// console.log(form)
+	form.addEventListener("submit", (event) => {
+
+		event.preventDefault();
+
+		fetch(url, {
+			method: "POST",
+			body: new FormData(form)
+		}).then(
+			response =>{
+				window.location.reload(true)
+				return response.json()
+			}
+
+		).then(
+			commits => console.log(commits),
+		);
+
+	});
 })();

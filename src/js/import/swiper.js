@@ -47,13 +47,25 @@ Swiper.use([Navigation, Autoplay]);
 						}
 					}
 				}
-				new Swiper(node, options);
+
+
+
+				let init = new Swiper(node, options);
+				let activeSlideThumbs = node.querySelectorAll(".swiper-slide");
+
+				let nextEl = node.parentNode.querySelector(".js-swiper__next");
+				let prevEl = node.parentNode.querySelector(".js-swiper__prev");
+
+				init.on("reachEnd", function() {
+					this.snapGrid = [...this.slidesGrid];
+				});
+
+				init.snapGrid = [...init.slidesGrid];
+
 			});
 		};
+
 		window.swiperInit = swiperInit;
 		swiperInit();
-
-
-
 	}
 })();

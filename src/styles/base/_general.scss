@@ -10,12 +10,16 @@ ul {
 }
 
 .container {
-	box-sizing: border-box;
+
 	@include container();
 	@include sm(max-width, rem(510));
 	@include md(max-width, rem(690));
 	@include lg(max-width, rem(930));
 	@include xl(max-width, rem(1240));
+	@include to(767px) {
+		box-sizing: border-box;
+	}
+
 }
 
 .button {

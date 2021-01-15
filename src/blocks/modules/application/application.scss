@@ -188,15 +188,11 @@
 				color: #000;
 			}
 
-			&:hover,
-			&:focus {
+			&:hover, &:focus {
 				border-bottom: 2px solid $main;
 			}
 
-			&:-webkit-autofill,
-			&:-webkit-autofill:hover,
-			&:-webkit-autofill:focus,
-			&:-webkit-autofill:active {
+			&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, &:-webkit-autofill:active {
 				-webkit-box-shadow: 0 0 0 30px #fff inset !important;
 			}
 		}
@@ -223,6 +219,9 @@
 
 	// .application__button
 	&__button {
+		@include to(767px) {
+			margin-top: 1px;
+		}
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -236,8 +235,5 @@
 		text-transform: uppercase;
 		margin-top: 20px;
 		outline: none;
-		@include to(767px) {
-			margin-top: 1px;
-		}
 	}
 }

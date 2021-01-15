@@ -1,7 +1,8 @@
 .connect {
 	@include to(1199px) {
 
-		&__h1, &__summ {
+		&__h1,
+		&__summ {
 			@include to(991px) {
 				font-size: 42px;
 			}
@@ -50,6 +51,7 @@
 			border-bottom: none;
 			padding-bottom: 0;
 			margin-bottom: 30px;
+			margin-top: 0;
 		}
 
 		@include to(767px) {
@@ -65,8 +67,9 @@
 		color: #000000;
 		max-width: 557px;
 		border-bottom: 1px solid #000000;
-		padding-bottom: 40px;
-		margin-bottom: 40px;
+		padding-bottom: 37px;
+		margin-bottom: 37px;
+		margin-top: 3px;
 	}
 
 	// .connect__info
@@ -130,7 +133,7 @@
 		}
 
 		font-family: "Open Sans",
-			sans-serif;
+		sans-serif;
 		font-style: normal;
 		font-weight: 400;
 		font-size: 18px;
@@ -237,7 +240,8 @@
 				}
 			}
 
-			width: 337px;
+			// width: 337px;
+			width: 322px;
 			max-width: 100%;
 			margin-right: 0;
 			background: #ffffff;
@@ -284,15 +288,16 @@
 			@include from(1200px) {
 				margin-right: 97px;
 			}
+
 			@include to(767px) {
 				.connect__desc {
-
 					max-width: 250px;
 				}
 			}
 		}
 
-		&:nth-of-type(3), &:nth-of-type(4) {
+		&:nth-of-type(3),
+		&:nth-of-type(4) {
 			@include from(768px) {
 				.connect__desc {
 					max-width: 218px;
