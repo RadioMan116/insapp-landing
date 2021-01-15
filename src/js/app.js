@@ -147,7 +147,10 @@
 
 
 })();
+
+
 // Form send
+
 (() => {
 	// ...ваш код
 	const form = document.querySelector(".application__form form");
