@@ -166,8 +166,8 @@
 			body: new FormData(form)
 		}).then(
 			response =>{
-				window.location.reload(true)
-				return response.json()
+				window.location = window.location.href;
+				return response.json();
 			}
 
 		).then(
